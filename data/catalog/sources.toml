@@ -1,0 +1,244 @@
+[[sources]]
+id = "google_style_guides"
+title = "Google Style Guides"
+organization = "Google"
+url = "https://google.github.io/styleguide/"
+kind = "official_documentation"
+topics = ["style", "Python", "Java"]
+language = "en"
+ingestion = "review_terms"
+
+[[sources]]
+id = "google_engineering_practices"
+title = "Google Engineering Practices"
+organization = "Google"
+url = "https://github.com/google/eng-practices/blob/master/review/reviewer/standard.md"
+kind = "official_documentation"
+topics = ["code_review", "engineering_practices"]
+language = "en"
+license = "CC-BY-3.0"
+license_url = "https://creativecommons.org/licenses/by/3.0/"
+local_path = "data/raw/google_engineering_practices"
+include = ["standard.md"]
+revision = "master snapshot 2026-11-23"
+ingestion = "allowed_with_attribution"
+
+[[sources]]
+id = "martin_fowler_refactoring"
+title = "Refactoring"
+organization = "Martin Fowler"
+url = "https://www.martinfowler.com/books/refactoring.html"
+kind = "author_reference"
+topics = ["refactoring", "design"]
+language = "en"
+ingestion = "review_terms"
+
+[[sources]]
+id = "aws_well_architected"
+title = "AWS Well-Architected Framework"
+organization = "Amazon Web Services"
+url = "https://docs.aws.amazon.com/wellarchitected/"
+kind = "official_documentation"
+topics = ["software_architecture", "reliability", "security"]
+language = "en"
+ingestion = "review_terms"
+
+[[sources]]
+id = "clean_code"
+title = "Clean Code"
+organization = "Robert C. Martin / Pearson"
+url = "https://www.pearson.com/en-us/subject-catalog/p/clean-code-a-handbook-of-agile-software-craftsmanship/P200000009044"
+kind = "book"
+topics = ["clean_code", "SOLID", "design"]
+language = "en"
+ingestion = "metadata_only_until_terms_review"
+
+[[sources]]
+id = "design_patterns_gof"
+title = "Design Patterns: Elements of Reusable Object-Oriented Software"
+organization = "Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides / Pearson"
+url = "https://www.pearson.com/en-us/subject-catalog/p/design-patterns-elements-of-reusable-object-oriented-software/P200000009480"
+kind = "book"
+topics = ["GoF", "design_patterns", "object_oriented_design"]
+language = "en"
+ingestion = "metadata_only_until_terms_review"
+
+[[sources]]
+id = "think_java_2e"
+title = "Think Java: How to Think Like a Computer Scientist, 2nd edition"
+organization = "Allen B. Downey and Chris Mayfield / Green Tea Press"
+url = "https://greenteapress.com/wp/think-java-2e/"
+kind = "book"
+topics = ["Java", "programming_fundamentals", "object_oriented_design"]
+language = "en"
+license = "CC-BY-NC-SA-4.0"
+license_url = "https://creativecommons.org/licenses/by-nc-sa/4.0/"
+local_path = "data/raw/books"
+include = ["think-java-2e.pdf"]
+revision = "2nd edition, official publisher download"
+ingestion = "allowed_with_attribution"
+
+[[sources]]
+id = "think_python_2e"
+title = "Think Python: How to Think Like a Computer Scientist, 2nd edition"
+organization = "Allen B. Downey / Green Tea Press"
+url = "https://greenteapress.com/wp/think-python-2e/"
+kind = "book"
+topics = ["Python", "programming_fundamentals", "object_oriented_design"]
+language = "en"
+license = "CC-BY-NC-3.0"
+license_url = "https://creativecommons.org/licenses/by-nc/3.0/"
+local_path = "data/raw/books"
+include = ["think-python-2e.pdf"]
+revision = "2nd edition, official publisher download"
+ingestion = "allowed_with_attribution"
+
+[[sources]]
+id = "requests_python"
+title = "Requests Python Library"
+organization = "Python Software Foundation / Kenneth Reitz and contributors"
+url = "https://github.com/psf/requests"
+kind = "open_source_repository"
+topics = ["Python", "HTTP", "library_design", "API"]
+language = "en"
+license = "Apache-2.0"
+license_url = "https://github.com/psf/requests/blob/main/LICENSE"
+local_path = "data/raw/repositories/requests"
+include = ["src/requests/**/*.py"]
+revision = "3c7baaa05ab4aa49cc819ce3a819d260de19c157"
+ingestion = "allowed_with_attribution"
+
+[[sources]]
+id = "flask_python"
+title = "Flask Web Framework"
+organization = "Pallets Projects / Armin Ronacher and contributors"
+url = "https://github.com/pallets/flask"
+kind = "open_source_repository"
+topics = ["Python", "web", "framework", "API"]
+language = "en"
+license = "BSD-3-Clause"
+license_url = "https://github.com/pallets/flask/blob/main/LICENSE.txt"
+local_path = "data/raw/repositories/flask"
+include = ["src/flask/**/*.py"]
+revision = "49943b5a94413a530761350f04e896f76e8d620e"
+ingestion = "allowed_with_attribution"
+
+[[sources]]
+id = "fastapi_python"
+title = "FastAPI Framework"
+organization = "Sebastián Ramírez and contributors"
+url = "https://github.com/fastapi/fastapi"
+kind = "open_source_repository"
+topics = ["Python", "web", "framework", "API", "async"]
+language = "en"
+license = "MIT"
+license_url = "https://github.com/fastapi/fastapi/blob/master/LICENSE"
+local_path = "data/raw/repositories/fastapi"
+include = ["fastapi/**/*.py"]
+revision = "05e6df7e906c3decba377c37548019973f40bf15"
+ingestion = "allowed_with_attribution"
+
+[[sources]]
+id = "spring_petclinic_java"
+title = "Spring Petclinic Sample Application"
+organization = "VMware Tanzu / Spring team and contributors"
+url = "https://github.com/spring-projects/spring-petclinic"
+kind = "open_source_repository"
+topics = ["Java", "Spring", "web", "application_architecture"]
+language = "en"
+license = "Apache-2.0"
+license_url = "https://github.com/spring-projects/spring-petclinic/blob/main/LICENSE.txt"
+local_path = "data/raw/repositories/spring-petclinic"
+include = ["src/main/java/**/*.java"]
+revision = "500158f732419217507c7656904b8e6aa1bcc0d6"
+ingestion = "allowed_with_attribution"
+
+[[sources]]
+id = "java_design_patterns"
+title = "Java Design Patterns"
+organization = "Iluwatar and community contributors"
+url = "https://github.com/iluwatar/java-design-patterns"
+kind = "open_source_repository"
+topics = ["Java", "design_patterns", "architecture", "object_oriented_design"]
+language = "en"
+license = "MIT"
+license_url = "https://github.com/iluwatar/java-design-patterns/blob/master/LICENSE.md"
+local_path = "data/raw/repositories/java-design-patterns"
+include = [
+  "abstract-factory/src/main/java/**/*.java",
+  "adapter/src/main/java/**/*.java",
+  "bridge/src/main/java/**/*.java",
+  "builder/src/main/java/**/*.java",
+  "chain-of-responsibility/src/main/java/**/*.java",
+  "command/src/main/java/**/*.java",
+  "composite/src/main/java/**/*.java",
+  "decorator/src/main/java/**/*.java",
+  "facade/src/main/java/**/*.java",
+  "factory-method/src/main/java/**/*.java",
+  "flyweight/src/main/java/**/*.java",
+  "iterator/src/main/java/**/*.java",
+  "mediator/src/main/java/**/*.java",
+  "memento/src/main/java/**/*.java",
+  "observer/src/main/java/**/*.java",
+  "prototype/src/main/java/**/*.java",
+  "proxy/src/main/java/**/*.java",
+  "singleton/src/main/java/**/*.java",
+  "state/src/main/java/**/*.java",
+  "strategy/src/main/java/**/*.java",
+  "template-method/src/main/java/**/*.java",
+  "visitor/src/main/java/**/*.java",
+  "repository/src/main/java/**/*.java",
+  "unit-of-work/src/main/java/**/*.java",
+]
+revision = "4cabb204f240240bea319605a5ffa46ded728001"
+ingestion = "allowed_with_attribution"
+
+[[sources]]
+id = "guava_java"
+title = "Guava: Google Core Libraries for Java"
+organization = "Google and Guava contributors"
+url = "https://github.com/google/guava"
+kind = "open_source_repository"
+topics = ["Java", "libraries", "collections", "concurrency", "API_design"]
+language = "en"
+license = "Apache-2.0"
+license_url = "https://github.com/google/guava/blob/master/LICENSE"
+local_path = "data/raw/repositories/guava"
+include = [
+  "guava/src/com/google/common/base/**/*.java",
+  "guava/src/com/google/common/util/concurrent/**/*.java",
+]
+revision = "7df9acd8babc1f6d26e18368c486a6df9ae423ac"
+ingestion = "allowed_with_attribution"
+
+[[sources]]
+id = "effective_java"
+title = "Effective Java"
+organization = "Joshua Bloch / Addison-Wesley"
+url = "https://www.pearson.com/en-us/subject-catalog/p/effective-java/P200000000138"
+kind = "book"
+topics = ["Java", "API_design", "best_practices"]
+language = "en"
+ingestion = "metadata_only_until_terms_review"
+
+[[sources]]
+id = "java_concurrency_in_practice"
+title = "Java Concurrency in Practice"
+organization = "Brian Goetz et al. / Addison-Wesley"
+url = "https://jcip.net/"
+kind = "book"
+topics = ["Java", "concurrency", "thread_safety"]
+language = "en"
+ingestion = "metadata_only_until_terms_review"
+
+[[sources]]
+id = "architecture_patterns_python"
+title = "Architecture Patterns with Python (Cosmic Python)"
+organization = "Harry Percival and Bob Gregory"
+url = "https://www.cosmicpython.com/"
+kind = "book"
+topics = ["Python", "architecture", "domain_driven_design", "testing"]
+language = "en"
+license = "CC-BY-NC-ND-4.0"
+license_url = "https://creativecommons.org/licenses/by-nc-nd/4.0/"
+ingestion = "metadata_only_until_terms_review"
