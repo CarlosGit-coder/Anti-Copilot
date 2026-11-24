@@ -1,1 +1,1 @@
-"""Assistente de arquitetura Anti-Copilot."""
+"""Anti-Copilot: chatbot local de memória de projeto baseado em RAG."""

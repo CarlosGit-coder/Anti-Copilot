@@ -1,0 +1,76 @@
+{
+  "name": "Anti-Copilot local RAG chat",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "anti-copilot-chat",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "id": "4b6b377a-3f2b-47c9-ae9e-c6eef63a9918",
+      "name": "Receber pergunta e contexto do RAG",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "position": [0, 0],
+      "webhookId": "e2c9a88f-c3c8-47b4-9fd5-7929ca8b48a5"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://ollama:11434/api/chat",
+        "sendBody": true,
+        "contentType": "raw",
+        "rawContentType": "application/json",
+        "body": "={{ JSON.stringify({model: 'qwen2.5:3b', stream: false, messages: [{role: 'system', content: 'Você é o Anti-Copilot, um mentor que ajuda a recuperar o contexto de projetos. Responda em português e baseie cada afirmação sobre o projeto somente nos trechos recuperados. Explique o que a fonte documenta, cite o nome e a seção relevantes, e indique quando a base não contém informação suficiente. Não invente decisões ou detalhes do projeto.\\n\\nTrechos recuperados:\\n' + ($json.body.contexto || '') + '\\n\\nFontes:\\n' + (($json.body.fontes || []).map(f => f.title + (f.section ? ' — ' + f.section : '') + (f.url ? ' (' + f.url + ')' : '')).join('\\n'))}, {role: 'user', content: $json.body.pergunta || ''}]}) }}",
+        "options": {
+          "timeout": 240000
+        }
+      },
+      "id": "a03e0ce5-4575-453d-af10-c05cf718ff7b",
+      "name": "Consultar modelo local Ollama",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [280, 0]
+    },
+    {
+      "parameters": {
+        "respondWith": "text",
+        "responseBody": "={{ $json.message.content }}",
+        "options": {
+          "responseCode": 200,
+          "responseHeaders": {
+            "entries": [
+              {
+                "name": "Content-Type",
+                "value": "text/markdown; charset=utf-8"
+              }
+            ]
+          }
+        }
+      },
+      "id": "6c4390fa-c38a-415d-ab54-5f48aa4ebde2",
+      "name": "Responder ao Streamlit",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.4,
+      "position": [560, 0]
+    }
+  ],
+  "connections": {
+    "Receber pergunta e contexto do RAG": {
+      "main": [[{"node": "Consultar modelo local Ollama", "type": "main", "index": 0}]]
+    },
+    "Consultar modelo local Ollama": {
+      "main": [[{"node": "Responder ao Streamlit", "type": "main", "index": 0}]]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "1f0dbb82-4d5a-4498-87bb-0184c4e59cfe",
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
+  "tags": []
+}

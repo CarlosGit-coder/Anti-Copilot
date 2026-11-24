@@ -1,13 +1,14 @@
-# Banco e estado local gerados pelo ChromaDB
+# Embeddings, estado local e ambientes de desenvolvimento
 data/chroma/
-
-# Repositórios clonados para consulta local e documentos privados do usuário
-data/raw/repositories/
-data/raw/private/
-
-# PDFs não devem ser adicionados ao Git por padrão; o catálogo registra a origem.
-data/raw/**/*.pdf
-
-# Arquivos produzidos pelo Python
+.venv/
 __pycache__/
 *.py[cod]
+*.egg-info/
+.env
+ollama_data/
+n8n_data/
+
+# Arquivos locais do editor
+.idea/
+.vscode/
+*.iml
