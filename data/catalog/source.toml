@@ -1,0 +1,6 @@
+project_name = "FastAPI"
+repository_url = "https://github.com/fastapi/fastapi"
+documentation_url = "https://fastapi.tiangolo.com/"
+license = "MIT"
+license_url = "https://github.com/fastapi/fastapi/blob/master/LICENSE"
+corpus_note = "Notas de estudo em português, resumidas e ligadas às páginas oficiais; não são uma cópia integral da documentação."
