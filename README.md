@@ -289,4 +289,4 @@ A proposta é oferecer uma ferramenta de memória de projeto que facilite o aces
 
 ## 🎬 Demonstração
 
-Link do video de demonstração do projeto:
+Link do video de demonstração do projeto: https://drive.google.com/file/d/1s-GA-WIpwPxv3dVrMpe-OkdekKpIc3xI/view?usp=sharing 
